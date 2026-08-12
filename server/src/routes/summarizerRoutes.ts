@@ -1,0 +1,19 @@
+import { Router } from 'express';
+import {
+  uploadMiddleware,
+  processPDFUpload,
+  getSummaries,
+  askPDFQuestion,
+  saveSummaryToNotes,
+} from '../controllers/summarizerController.js';
+import { authenticate } from '../middleware/authMiddleware.js';
+
+const router = Router();
+
+router.use(authenticate);
+router.post('/upload', uploadMiddleware, processPDFUpload);
+router.get('/', getSummaries);
+router.post('/qa', askPDFQuestion);
+router.post('/save-note', saveSummaryToNotes);
+
+export default router;
