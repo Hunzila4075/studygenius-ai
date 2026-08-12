@@ -1,4 +1,4 @@
-import { Request, Response, NextFunction } from 'express';
+﻿import { Request, Response, NextFunction } from 'express';
 import { verifyToken, TokenPayload } from '../utils/authUtils.js';
 
 export interface AuthRequest extends Request {
@@ -28,3 +28,4 @@ export const authenticate = (req: AuthRequest, res: Response, next: NextFunction
     res.status(401).json({ success: false, message: 'Invalid or expired token. Please log in again.' });
   }
 };
+
