@@ -110,7 +110,12 @@ app.use(errorHandler);
 // Connect DB and launch server
 connectDB()
   .then(() => {
-    app.listen(PORT, '0.0.0.0', () => {
+    
+app.get('/', (req, res) => {
+  res.status(200).json({ status: 'success', message: 'StudyGenius API is running successfully!' });
+});
+
+app.listen(PORT, '0.0.0.0', () => {
       console.log(`ðŸš€ StudyGenius AI Backend Server running on port ${PORT}`);
     });
   })
@@ -118,4 +123,5 @@ connectDB()
     console.error('âŒ Failed to start server:', error);
     process.exit(1);
   });
+
 
