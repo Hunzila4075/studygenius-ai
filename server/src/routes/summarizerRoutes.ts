@@ -1,4 +1,4 @@
-import { Router } from 'express';
+﻿import { Router } from 'express';
 import {
   uploadMiddleware,
   processPDFUpload,
@@ -17,3 +17,4 @@ router.post('/qa', askPDFQuestion);
 router.post('/save-note', saveSummaryToNotes);
 
 export default router;
+

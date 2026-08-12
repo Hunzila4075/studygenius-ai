@@ -1,4 +1,4 @@
-import mongoose, { Schema, Document } from 'mongoose';
+﻿import mongoose, { Schema, Document } from 'mongoose';
 
 export interface IQuizQuestion {
   question: string;
@@ -50,3 +50,4 @@ const QuizSchema: Schema = new Schema(
 );
 
 export default mongoose.model<IQuiz>('Quiz', QuizSchema);
+

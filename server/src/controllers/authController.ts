@@ -1,4 +1,4 @@
-import { Request, Response } from 'express';
+﻿import { Request, Response } from 'express';
 import bcrypt from 'bcryptjs';
 import User from '../models/User.js';
 import Subject from '../models/Subject.js';
@@ -184,3 +184,4 @@ export const changePassword = async (req: AuthRequest, res: Response): Promise<v
     res.status(500).json({ success: false, message: 'Failed to update password.' });
   }
 };
+

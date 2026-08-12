@@ -1,4 +1,4 @@
-import { Router } from 'express';
+﻿import { Router } from 'express';
 import { updateProfile, updateSettings, deleteAccount } from '../controllers/userController.js';
 import { authenticate } from '../middleware/authMiddleware.js';
 
@@ -9,3 +9,4 @@ router.put('/settings', authenticate, updateSettings);
 router.delete('/account', authenticate, deleteAccount);
 
 export default router;
+

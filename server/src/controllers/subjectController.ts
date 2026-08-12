@@ -1,4 +1,4 @@
-import { Response } from 'express';
+﻿import { Response } from 'express';
 import { AuthRequest } from '../middleware/authMiddleware.js';
 import Subject from '../models/Subject.js';
 import Note from '../models/Note.js';
@@ -114,3 +114,4 @@ export const deleteSubject = async (req: AuthRequest, res: Response): Promise<vo
     res.status(500).json({ success: false, message: 'Failed to delete subject.' });
   }
 };
+

@@ -1,4 +1,4 @@
-import mongoose, { Schema, Document } from 'mongoose';
+﻿import mongoose, { Schema, Document } from 'mongoose';
 
 export interface INote extends Document {
   userId: mongoose.Types.ObjectId;
@@ -26,3 +26,4 @@ const NoteSchema: Schema = new Schema(
 NoteSchema.index({ userId: 1, title: 'text', content: 'text', tags: 'text' });
 
 export default mongoose.model<INote>('Note', NoteSchema);
+

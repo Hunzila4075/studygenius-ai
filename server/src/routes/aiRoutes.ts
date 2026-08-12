@@ -1,4 +1,4 @@
-import { Router } from 'express';
+﻿import { Router } from 'express';
 import { getAIStatus } from '../services/aiService.js';
 
 const router = Router();
@@ -8,3 +8,4 @@ router.get('/status', (req, res) => {
 });
 
 export default router;
+

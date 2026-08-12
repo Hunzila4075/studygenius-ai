@@ -1,4 +1,4 @@
-import { Response } from 'express';
+﻿import { Response } from 'express';
 import { AuthRequest } from '../middleware/authMiddleware.js';
 import Conversation from '../models/Conversation.js';
 import Note from '../models/Note.js';
@@ -141,3 +141,4 @@ export const deleteConversation = async (req: AuthRequest, res: Response): Promi
     res.status(500).json({ success: false, message: 'Failed to delete conversation.' });
   }
 };
+

@@ -1,4 +1,4 @@
-import { Response } from 'express';
+﻿import { Response } from 'express';
 import { AuthRequest } from '../middleware/authMiddleware.js';
 import Flashcard from '../models/Flashcard.js';
 import { generateFlashcardsAI } from '../services/aiService.js';
@@ -171,3 +171,4 @@ export const deleteFlashcard = async (req: AuthRequest, res: Response): Promise<
     res.status(500).json({ success: false, message: 'Failed to delete flashcard.' });
   }
 };
+

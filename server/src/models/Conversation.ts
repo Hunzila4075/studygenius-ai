@@ -1,4 +1,4 @@
-import mongoose, { Schema, Document } from 'mongoose';
+﻿import mongoose, { Schema, Document } from 'mongoose';
 
 export interface IChatMessage {
   sender: 'user' | 'ai';
@@ -34,3 +34,4 @@ const ConversationSchema: Schema = new Schema(
 );
 
 export default mongoose.model<IConversation>('Conversation', ConversationSchema);
+

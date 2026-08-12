@@ -1,4 +1,4 @@
-import { Response } from 'express';
+﻿import { Response } from 'express';
 import { AuthRequest } from '../middleware/authMiddleware.js';
 import Quiz from '../models/Quiz.js';
 import StudyTask from '../models/StudyTask.js';
@@ -90,3 +90,4 @@ export const getAnalyticsData = async (req: AuthRequest, res: Response): Promise
     res.status(500).json({ success: false, message: 'Failed to fetch analytics data.' });
   }
 };
+

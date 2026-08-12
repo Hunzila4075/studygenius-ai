@@ -1,4 +1,4 @@
-import mongoose, { Schema, Document } from 'mongoose';
+﻿import mongoose, { Schema, Document } from 'mongoose';
 
 export interface ISummary extends Document {
   userId: mongoose.Types.ObjectId;
@@ -33,3 +33,4 @@ const SummarySchema: Schema = new Schema(
 );
 
 export default mongoose.model<ISummary>('Summary', SummarySchema);
+

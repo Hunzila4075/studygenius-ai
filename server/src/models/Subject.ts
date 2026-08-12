@@ -1,4 +1,4 @@
-import mongoose, { Schema, Document } from 'mongoose';
+﻿import mongoose, { Schema, Document } from 'mongoose';
 
 export interface ISubject extends Document {
   userId: mongoose.Types.ObjectId;
@@ -22,3 +22,4 @@ const SubjectSchema: Schema = new Schema(
 SubjectSchema.index({ userId: 1, name: 1 }, { unique: true });
 
 export default mongoose.model<ISubject>('Subject', SubjectSchema);
+

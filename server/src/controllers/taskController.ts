@@ -1,4 +1,4 @@
-import { Response } from 'express';
+﻿import { Response } from 'express';
 import { AuthRequest } from '../middleware/authMiddleware.js';
 import StudyTask from '../models/StudyTask.js';
 
@@ -113,3 +113,4 @@ export const deleteTask = async (req: AuthRequest, res: Response): Promise<void>
     res.status(500).json({ success: false, message: 'Failed to delete task.' });
   }
 };
+

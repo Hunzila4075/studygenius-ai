@@ -1,4 +1,4 @@
-import { Response } from 'express';
+﻿import { Response } from 'express';
 import { AuthRequest } from '../middleware/authMiddleware.js';
 import Quiz from '../models/Quiz.js';
 import Subject from '../models/Subject.js';
@@ -100,3 +100,4 @@ export const getQuizHistory = async (req: AuthRequest, res: Response): Promise<v
     res.status(500).json({ success: false, message: 'Failed to fetch quiz history.' });
   }
 };
+

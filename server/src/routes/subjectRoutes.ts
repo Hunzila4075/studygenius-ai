@@ -1,4 +1,4 @@
-import { Router } from 'express';
+﻿import { Router } from 'express';
 import { getSubjects, createSubject, updateSubject, deleteSubject } from '../controllers/subjectController.js';
 import { authenticate } from '../middleware/authMiddleware.js';
 
@@ -11,3 +11,4 @@ router.put('/:id', updateSubject);
 router.delete('/:id', deleteSubject);
 
 export default router;
+

@@ -1,4 +1,4 @@
-import { Request, Response, NextFunction } from 'express';
+﻿import { Request, Response, NextFunction } from 'express';
 
 export const errorHandler = (err: any, req: Request, res: Response, next: NextFunction): void => {
   console.error('Unhandled Error:', err.message || err);
@@ -10,3 +10,4 @@ export const errorHandler = (err: any, req: Request, res: Response, next: NextFu
     message: err.message || 'Something went wrong. Please try again.',
   });
 };
+

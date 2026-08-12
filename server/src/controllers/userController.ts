@@ -1,4 +1,4 @@
-import { Response } from 'express';
+﻿import { Response } from 'express';
 import { AuthRequest } from '../middleware/authMiddleware.js';
 import User from '../models/User.js';
 
@@ -76,3 +76,4 @@ export const deleteAccount = async (req: AuthRequest, res: Response): Promise<vo
     res.status(500).json({ success: false, message: 'Failed to delete account.' });
   }
 };
+

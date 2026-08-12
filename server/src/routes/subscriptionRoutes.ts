@@ -1,4 +1,4 @@
-import { Router } from 'express';
+﻿import { Router } from 'express';
 import {
   getSubscriptionStatus,
   createCheckoutSession,
@@ -15,3 +15,4 @@ router.post('/cancel', authenticate, cancelSubscription);
 router.post('/webhook', handleStripeWebhook);
 
 export default router;
+

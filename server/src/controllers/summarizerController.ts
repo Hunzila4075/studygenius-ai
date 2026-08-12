@@ -1,4 +1,4 @@
-import { Response } from 'express';
+﻿import { Response } from 'express';
 import multer from 'multer';
 import pdfParse from 'pdf-parse';
 import { AuthRequest } from '../middleware/authMiddleware.js';
@@ -106,7 +106,7 @@ export const saveSummaryToNotes = async (req: AuthRequest, res: Response): Promi
       return;
     }
 
-    const content = `### ${summary.title}\n\n**Summary:**\n${summary.summaryText}\n\n**Important Points:**\n${summary.importantPoints.map((p) => `• ${p}`).join('\n')}\n\n**Key Terms:**\n${summary.keyTerms.map((k) => `• **${k.term}**: ${k.definition}`).join('\n')}\n\n**Short Notes:**\n${summary.shortNotes}`;
+    const content = `### ${summary.title}\n\n**Summary:**\n${summary.summaryText}\n\n**Important Points:**\n${summary.importantPoints.map((p) => `â€¢ ${p}`).join('\n')}\n\n**Key Terms:**\n${summary.keyTerms.map((k) => `â€¢ **${k.term}**: ${k.definition}`).join('\n')}\n\n**Short Notes:**\n${summary.shortNotes}`;
 
     const note = await Note.create({
       userId,
@@ -121,3 +121,4 @@ export const saveSummaryToNotes = async (req: AuthRequest, res: Response): Promi
     res.status(500).json({ success: false, message: 'Failed to save summary to notes.' });
   }
 };
+

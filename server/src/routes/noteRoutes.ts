@@ -1,4 +1,4 @@
-import { Router } from 'express';
+﻿import { Router } from 'express';
 import { getNotes, createNote, updateNote, toggleFavoriteNote, deleteNote } from '../controllers/noteController.js';
 import { authenticate } from '../middleware/authMiddleware.js';
 
@@ -12,3 +12,4 @@ router.patch('/:id/favorite', toggleFavoriteNote);
 router.delete('/:id', deleteNote);
 
 export default router;
+

@@ -1,4 +1,4 @@
-import { GoogleGenAI } from '@google/genai';
+﻿import { GoogleGenAI } from '@google/genai';
 
 const apiKey = process.env.AI_API_KEY || process.env.GEMINI_API_KEY || '';
 const isDemoMode = !apiKey || apiKey.trim() === '' || apiKey.trim() === 'your_key_here' || apiKey.trim() === 'your_gemini_api_key_here';
@@ -44,7 +44,7 @@ Respond in the signature Google Gemini AI persona:
 - Friendly, direct, encouraging, and intelligent tone.
 - Clear structured Markdown with headers (###), bold key terms, and bullet points.
 - Provide a concise explanation first, followed by code/examples if relevant.
-- Include a 💡 **Gemini Recommendation** section at the end suggesting the next logical study step or practice quiz.`;
+- Include a ðŸ’¡ **Gemini Recommendation** section at the end suggesting the next logical study step or practice quiz.`;
 
       const response = await aiClient.models.generateContent({
         model: 'gemini-2.5-flash',
@@ -174,16 +174,16 @@ function generateMockTutorResponse(userMessage: string, subject: string): string
   const lowerMsg = userMessage.toLowerCase();
 
   if (lowerMsg.includes('hello') || lowerMsg.includes('hi') || lowerMsg.includes('hey')) {
-    return `Hello! 👋 I'm **Gemini AI**, your study tutor for **${subject}**.
+    return `Hello! ðŸ‘‹ I'm **Gemini AI**, your study tutor for **${subject}**.
 
 I can break down complex university topics, explain code step-by-step, or generate revision strategies for your exams.
 
-💡 **Gemini Recommendation**: Ask me *"Explain Binary Search in C++"* or *"What is MongoDB indexing?"* to get started!`;
+ðŸ’¡ **Gemini Recommendation**: Ask me *"Explain Binary Search in C++"* or *"What is MongoDB indexing?"* to get started!`;
   }
 
   // C++ Code / C++ Programming Queries
   if (lowerMsg.includes('c++') || lowerMsg.includes('cpp')) {
-    return `### C++ Fundamentals 💻 — Gemini Breakdown
+    return `### C++ Fundamentals ðŸ’» â€” Gemini Breakdown
 
 **C++** is a powerful compiled programming language that combines low-level memory control with high-level object-oriented abstractions.
 
@@ -192,7 +192,7 @@ I can break down complex university topics, explain code step-by-step, or genera
 using namespace std;
 
 int main() {
-    cout << "Hello from Gemini AI Study Assistant! 🚀" << endl;
+    cout << "Hello from Gemini AI Study Assistant! ðŸš€" << endl;
     return 0; // Standard exit status
 }
 \`\`\`
@@ -201,12 +201,12 @@ int main() {
 - \`#include <iostream>\`: Includes standard input/output stream capabilities (\`cin\`/\`cout\`).
 - \`main()\`: Mandatory entry point for executable execution.
 
-💡 **Gemini Recommendation**: Practice writing C++ functions and understanding pointer memory management next!`;
+ðŸ’¡ **Gemini Recommendation**: Practice writing C++ functions and understanding pointer memory management next!`;
   }
 
   // Computer Science Definition
   if (lowerMsg.includes('computer science') || lowerMsg.includes('what is cs')) {
-    return `### Computer Science (CS) 🌐 — Gemini Overview
+    return `### Computer Science (CS) ðŸŒ â€” Gemini Overview
 
 **Computer Science** is the systematic study of computation, information processing, data structures, and software system architecture.
 
@@ -215,26 +215,26 @@ int main() {
 - **Software Engineering**: Designing scalable, maintainable application systems.
 - **Database Architecture**: Organizing and querying structured (SQL) and NoSQL datasets.
 
-💡 **Gemini Recommendation**: Focus on Data Structures & Algorithms (DSA) — it forms the core of university exams and technical interviews!`;
+ðŸ’¡ **Gemini Recommendation**: Focus on Data Structures & Algorithms (DSA) â€” it forms the core of university exams and technical interviews!`;
   }
 
   if (lowerMsg.includes('database') || lowerMsg.includes('sql') || lowerMsg.includes('mongodb')) {
-    return `### Database Systems 🗄️ — Gemini Breakdown
+    return `### Database Systems ðŸ—„ï¸ â€” Gemini Breakdown
 
 - **Relational Databases (SQL)**: Structured tables with fixed schemas and ACID transaction guarantees (e.g., PostgreSQL, MySQL).
 - **NoSQL Databases (MongoDB)**: Document-oriented JSON/BSON storage for high horizontal scalability and flexible schemas.
 
-💡 **Gemini Recommendation**: Design a database Schema or ER Diagram before writing queries for your projects!`;
+ðŸ’¡ **Gemini Recommendation**: Design a database Schema or ER Diagram before writing queries for your projects!`;
   }
 
-  return `### ${userMessage} 📘 — Gemini Explanation
+  return `### ${userMessage} ðŸ“˜ â€” Gemini Explanation
 
 **Core Concept**: ${userMessage} is a fundamental concept in **${subject}** focused on systematic computational logic and efficiency.
 
 - **Primary Goal**: Ensures operational reliability, data consistency, and performance optimization.
 - **Practical Application**: Applied in software engineering to build robust, scalable applications.
 
-💡 **Gemini Recommendation**: Try generating a 5-question Quiz on **${userMessage}** in the Quizzes tab to test your active recall!`;
+ðŸ’¡ **Gemini Recommendation**: Try generating a 5-question Quiz on **${userMessage}** in the Quizzes tab to test your active recall!`;
 }
 
 function generateMockPDFSummary(fileName: string, pdfText: string) {
@@ -258,7 +258,7 @@ function generateMockPDFSummary(fileName: string, pdfText: string) {
       'How does state management impact overall system performance?',
       'Which trade-off is most critical when scaling throughput vs latency?',
     ],
-    shortNotes: `• Topic: ${cleanTitle}\n• High Priority: Master key terminology & architectural boundaries.\n• Exam Tip: Review comparison tables and code snippets for practical questions.`,
+    shortNotes: `â€¢ Topic: ${cleanTitle}\nâ€¢ High Priority: Master key terminology & architectural boundaries.\nâ€¢ Exam Tip: Review comparison tables and code snippets for practical questions.`,
   };
 }
 
@@ -354,3 +354,4 @@ function generateMockFlashcards(topic: string, count: number) {
 
   return cards.slice(0, count);
 }
+

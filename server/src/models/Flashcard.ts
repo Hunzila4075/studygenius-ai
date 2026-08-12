@@ -1,4 +1,4 @@
-import mongoose, { Schema, Document } from 'mongoose';
+﻿import mongoose, { Schema, Document } from 'mongoose';
 
 export interface IFlashcard extends Document {
   userId: mongoose.Types.ObjectId;
@@ -24,3 +24,4 @@ const FlashcardSchema: Schema = new Schema(
 );
 
 export default mongoose.model<IFlashcard>('Flashcard', FlashcardSchema);
+

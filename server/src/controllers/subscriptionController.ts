@@ -1,4 +1,4 @@
-import { Response } from 'express';
+﻿import { Response } from 'express';
 import { AuthRequest } from '../middleware/authMiddleware.js';
 import User from '../models/User.js';
 
@@ -173,3 +173,4 @@ export const handleStripeWebhook = async (req: any, res: Response): Promise<void
     res.status(400).send(`Webhook Error: ${err.message}`);
   }
 };
+

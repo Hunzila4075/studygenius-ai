@@ -1,4 +1,4 @@
-import mongoose, { Schema, Document } from 'mongoose';
+﻿import mongoose, { Schema, Document } from 'mongoose';
 
 export interface IStudySession extends Document {
   userId: mongoose.Types.ObjectId;
@@ -20,3 +20,4 @@ const StudySessionSchema: Schema = new Schema(
 );
 
 export default mongoose.model<IStudySession>('StudySession', StudySessionSchema);
+

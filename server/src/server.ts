@@ -1,4 +1,4 @@
-import express from 'express';
+﻿import express from 'express';
 import dotenv from 'dotenv';
 import cors from 'cors';
 import helmet from 'helmet';
@@ -111,10 +111,11 @@ app.use(errorHandler);
 connectDB()
   .then(() => {
     app.listen(PORT, '0.0.0.0', () => {
-      console.log(`🚀 StudyGenius AI Backend Server running on port ${PORT}`);
+      console.log(`ðŸš€ StudyGenius AI Backend Server running on port ${PORT}`);
     });
   })
   .catch((error) => {
-    console.error('❌ Failed to start server:', error);
+    console.error('âŒ Failed to start server:', error);
     process.exit(1);
   });
+

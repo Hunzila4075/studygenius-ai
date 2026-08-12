@@ -1,4 +1,4 @@
-import { Router } from 'express';
+﻿import { Router } from 'express';
 import { getTasks, createTask, updateTask, toggleTaskComplete, deleteTask } from '../controllers/taskController.js';
 import { authenticate } from '../middleware/authMiddleware.js';
 
@@ -12,3 +12,4 @@ router.patch('/:id/complete', toggleTaskComplete);
 router.delete('/:id', deleteTask);
 
 export default router;
+
