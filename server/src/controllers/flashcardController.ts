@@ -1,7 +1,7 @@
 import { Response } from 'express';
-import { AuthRequest } from '../middleware/authMiddleware.js';
-import Flashcard from '../models/Flashcard.js';
-import { generateFlashcardsAI } from '../services/aiService.js';
+import { AuthRequest } from '../middleware/authMiddleware';
+import Flashcard from '../models/Flashcard';
+import { generateFlashcardsAI } from '../services/aiService';
 
 export const getFlashcards = async (req: AuthRequest, res: Response): Promise<void> => {
   try {

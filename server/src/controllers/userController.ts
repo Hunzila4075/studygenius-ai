@@ -1,6 +1,6 @@
 import { Response } from 'express';
-import { AuthRequest } from '../middleware/authMiddleware.js';
-import User from '../models/User.js';
+import { AuthRequest } from '../middleware/authMiddleware';
+import User from '../models/User';
 
 export const updateProfile = async (req: AuthRequest, res: Response): Promise<void> => {
   try {

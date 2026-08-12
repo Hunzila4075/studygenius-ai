@@ -1,6 +1,6 @@
 import { Response } from 'express';
-import { AuthRequest } from '../middleware/authMiddleware.js';
-import Note from '../models/Note.js';
+import { AuthRequest } from '../middleware/authMiddleware';
+import Note from '../models/Note';
 
 export const getNotes = async (req: AuthRequest, res: Response): Promise<void> => {
   try {

@@ -1,8 +1,8 @@
 import { Response } from 'express';
-import { AuthRequest } from '../middleware/authMiddleware.js';
-import Quiz from '../models/Quiz.js';
-import Subject from '../models/Subject.js';
-import { generateQuizAI } from '../services/aiService.js';
+import { AuthRequest } from '../middleware/authMiddleware';
+import Quiz from '../models/Quiz';
+import Subject from '../models/Subject';
+import { generateQuizAI } from '../services/aiService';
 
 export const generateQuiz = async (req: AuthRequest, res: Response): Promise<void> => {
   try {

@@ -6,8 +6,8 @@ import {
   saveResponseToNotes,
   clearConversation,
   deleteConversation,
-} from '../controllers/conversationController.js';
-import { authenticate } from '../middleware/authMiddleware.js';
+} from '../controllers/conversationController';
+import { authenticate } from '../middleware/authMiddleware';
 
 const router = Router();
 

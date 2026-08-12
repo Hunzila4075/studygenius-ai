@@ -4,8 +4,8 @@ import {
   createCheckoutSession,
   cancelSubscription,
   handleStripeWebhook,
-} from '../controllers/subscriptionController.js';
-import { authenticate } from '../middleware/authMiddleware.js';
+} from '../controllers/subscriptionController';
+import { authenticate } from '../middleware/authMiddleware';
 
 const router = Router();
 

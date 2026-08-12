@@ -1,6 +1,6 @@
 import { Router } from 'express';
-import { generateQuiz, submitQuizResults, getQuizHistory } from '../controllers/quizController.js';
-import { authenticate } from '../middleware/authMiddleware.js';
+import { generateQuiz, submitQuizResults, getQuizHistory } from '../controllers/quizController';
+import { authenticate } from '../middleware/authMiddleware';
 
 const router = Router();
 
