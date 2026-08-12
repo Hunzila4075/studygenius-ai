@@ -1,6 +1,6 @@
 import { Response } from 'express';
-import { AuthRequest } from '../middleware/authMiddleware';
-import User from '../models/User';
+import { AuthRequest } from '../middleware/authMiddleware.js';
+import User from '../models/User.js';
 
 export const PLAN_LIMITS = {
   Free: {

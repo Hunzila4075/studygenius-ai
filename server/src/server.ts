@@ -6,22 +6,22 @@ import rateLimit from 'express-rate-limit';
 import path from 'path';
 import { fileURLToPath } from 'url';
 
-import { connectDB } from './config/db';
-import { errorHandler } from './middleware/errorMiddleware';
+import { connectDB } from './config/db.js';
+import { errorHandler } from './middleware/errorMiddleware.js';
 
 // Route imports
-import authRoutes from './routes/authRoutes';
-import userRoutes from './routes/userRoutes';
-import subjectRoutes from './routes/subjectRoutes';
-import noteRoutes from './routes/noteRoutes';
-import quizRoutes from './routes/quizRoutes';
-import taskRoutes from './routes/taskRoutes';
-import flashcardRoutes from './routes/flashcardRoutes';
-import conversationRoutes from './routes/conversationRoutes';
-import summarizerRoutes from './routes/summarizerRoutes';
-import analyticsRoutes from './routes/analyticsRoutes';
-import aiRoutes from './routes/aiRoutes';
-import subscriptionRoutes from './routes/subscriptionRoutes';
+import authRoutes from './routes/authRoutes.js';
+import userRoutes from './routes/userRoutes.js';
+import subjectRoutes from './routes/subjectRoutes.js';
+import noteRoutes from './routes/noteRoutes.js';
+import quizRoutes from './routes/quizRoutes.js';
+import taskRoutes from './routes/taskRoutes.js';
+import flashcardRoutes from './routes/flashcardRoutes.js';
+import conversationRoutes from './routes/conversationRoutes.js';
+import summarizerRoutes from './routes/summarizerRoutes.js';
+import analyticsRoutes from './routes/analyticsRoutes.js';
+import aiRoutes from './routes/aiRoutes.js';
+import subscriptionRoutes from './routes/subscriptionRoutes.js';
 
 dotenv.config();
 

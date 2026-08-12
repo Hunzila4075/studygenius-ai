@@ -7,8 +7,8 @@ import {
   toggleReview,
   deleteFlashcard,
   updateFlashcardStatus,
-} from '../controllers/flashcardController';
-import { authenticate } from '../middleware/authMiddleware';
+} from '../controllers/flashcardController.js';
+import { authenticate } from '../middleware/authMiddleware.js';
 
 const router = Router();
 

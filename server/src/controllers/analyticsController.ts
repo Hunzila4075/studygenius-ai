@@ -1,11 +1,11 @@
 import { Response } from 'express';
-import { AuthRequest } from '../middleware/authMiddleware';
-import Quiz from '../models/Quiz';
-import StudyTask from '../models/StudyTask';
-import Subject from '../models/Subject';
-import StudySession from '../models/StudySession';
-import Note from '../models/Note';
-import Flashcard from '../models/Flashcard';
+import { AuthRequest } from '../middleware/authMiddleware.js';
+import Quiz from '../models/Quiz.js';
+import StudyTask from '../models/StudyTask.js';
+import Subject from '../models/Subject.js';
+import StudySession from '../models/StudySession.js';
+import Note from '../models/Note.js';
+import Flashcard from '../models/Flashcard.js';
 
 export const getAnalyticsData = async (req: AuthRequest, res: Response): Promise<void> => {
   try {

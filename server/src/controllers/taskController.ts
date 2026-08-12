@@ -1,6 +1,6 @@
 import { Response } from 'express';
-import { AuthRequest } from '../middleware/authMiddleware';
-import StudyTask from '../models/StudyTask';
+import { AuthRequest } from '../middleware/authMiddleware.js';
+import StudyTask from '../models/StudyTask.js';
 
 export const getTasks = async (req: AuthRequest, res: Response): Promise<void> => {
   try {

@@ -1,10 +1,10 @@
 import { Response } from 'express';
 import multer from 'multer';
 import pdfParse from 'pdf-parse';
-import { AuthRequest } from '../middleware/authMiddleware';
-import Summary from '../models/Summary';
-import Note from '../models/Note';
-import { generatePDFSummary, generateTutorResponse } from '../services/aiService';
+import { AuthRequest } from '../middleware/authMiddleware.js';
+import Summary from '../models/Summary.js';
+import Note from '../models/Note.js';
+import { generatePDFSummary, generateTutorResponse } from '../services/aiService.js';
 
 // Configure Multer in-memory storage for PDF uploads
 const upload = multer({

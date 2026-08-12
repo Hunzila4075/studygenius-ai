@@ -1,10 +1,10 @@
 import { Response } from 'express';
-import { AuthRequest } from '../middleware/authMiddleware';
-import Subject from '../models/Subject';
-import Note from '../models/Note';
-import Quiz from '../models/Quiz';
-import StudyTask from '../models/StudyTask';
-import StudySession from '../models/StudySession';
+import { AuthRequest } from '../middleware/authMiddleware.js';
+import Subject from '../models/Subject.js';
+import Note from '../models/Note.js';
+import Quiz from '../models/Quiz.js';
+import StudyTask from '../models/StudyTask.js';
+import StudySession from '../models/StudySession.js';
 
 export const getSubjects = async (req: AuthRequest, res: Response): Promise<void> => {
   try {

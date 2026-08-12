@@ -1,8 +1,8 @@
 import { Response } from 'express';
-import { AuthRequest } from '../middleware/authMiddleware';
-import Conversation from '../models/Conversation';
-import Note from '../models/Note';
-import { generateTutorResponse } from '../services/aiService';
+import { AuthRequest } from '../middleware/authMiddleware.js';
+import Conversation from '../models/Conversation.js';
+import Note from '../models/Note.js';
+import { generateTutorResponse } from '../services/aiService.js';
 
 export const getConversations = async (req: AuthRequest, res: Response): Promise<void> => {
   try {

@@ -1,5 +1,5 @@
 import { Router } from 'express';
-import { getAIStatus } from '../services/aiService';
+import { getAIStatus } from '../services/aiService.js';
 
 const router = Router();
 

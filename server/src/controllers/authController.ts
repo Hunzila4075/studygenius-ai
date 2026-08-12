@@ -1,9 +1,9 @@
 import { Request, Response } from 'express';
 import bcrypt from 'bcryptjs';
-import User from '../models/User';
-import Subject from '../models/Subject';
-import { generateToken } from '../utils/authUtils';
-import { AuthRequest } from '../middleware/authMiddleware';
+import User from '../models/User.js';
+import Subject from '../models/Subject.js';
+import { generateToken } from '../utils/authUtils.js';
+import { AuthRequest } from '../middleware/authMiddleware.js';
 
 export const register = async (req: Request, res: Response): Promise<void> => {
   try {

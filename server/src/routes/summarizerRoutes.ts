@@ -5,8 +5,8 @@ import {
   getSummaries,
   askPDFQuestion,
   saveSummaryToNotes,
-} from '../controllers/summarizerController';
-import { authenticate } from '../middleware/authMiddleware';
+} from '../controllers/summarizerController.js';
+import { authenticate } from '../middleware/authMiddleware.js';
 
 const router = Router();
 
